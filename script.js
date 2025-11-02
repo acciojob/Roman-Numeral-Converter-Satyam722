@@ -8,7 +8,19 @@ function convertToRoman(num) {
       5:['V', 5], 
       6:['I', 1]
     };
+  if (num === 0) return 'N'; // Romans didn’t have a zero symbol
 
+  let result = '';
+
+  for (let [symbol, value] of romanSymbols) {
+    while (num >= value) {
+      result += symbol;
+      num -= value;
+    }
+  }
+
+  return result;
+}
   //your code here
 
 }
