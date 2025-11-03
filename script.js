@@ -31,3 +31,5 @@ function convertToRoman(num) {
   return result;
 }
 
+// ✅ Important: Export the function so tests or server can use it
+module.exports = convertToRoman;
